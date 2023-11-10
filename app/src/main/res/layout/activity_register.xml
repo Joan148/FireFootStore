@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_flame"
+    tools:context=".MainActivity"
+    >
+    <LinearLayout
+        android:id="@+id/logo_firefoot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center"
+        >
+        <ImageView
+            android:layout_width="157dp"
+            android:layout_height="157dp"
+            android:src="@mipmap/bg_firefootlogo"
+
+            ></ImageView>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/logo_firefoot"
+
+        >
+
+        <TextView
+            android:id="@+id/textView0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="8dp"
+            android:text="Nombres Completos"
+            android:textColor="@color/white"
+            android:textSize="17dp" />
+
+        <EditText
+            android:id="@+id/RegisterTxtNames"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:inputType="text"
+            android:text=""
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="8dp"
+            android:text="Usuario"
+            android:textColor="@color/white"
+            android:textSize="17dp" />
+
+        <EditText
+            android:id="@+id/RegisterTxtUser"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_margin="8dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:inputType="text"
+            android:text=""
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_marginLeft="5dp"
+            android:text="Contraseña"
+            android:textColor="@color/white"
+            android:textSize="17dp" />
+
+        <EditText
+            android:id="@+id/RegisterTxtPwd"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_margin="8dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:text=""
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_marginLeft="5dp"
+            android:text="Correo Electrónico"
+            android:textColor="@color/white"
+            android:textSize="17dp" />
+
+        <EditText
+            android:id="@+id/RegisterTxtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_margin="8dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:text=""
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_marginLeft="5dp"
+            android:text="Teléfono"
+            android:textColor="@color/white"
+            android:textSize="17dp" />
+
+        <EditText
+            android:id="@+id/RegisterTxtPhone"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_margin="8dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:text=""
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/btnRegisterCustom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginBottom="5dp"
+            android:backgroundTint="@color/wine_red"
+            android:text="Registrarse" />
+
+        <LinearLayout
+            android:id="@+id/lay_btnCustomers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="end"
+            >
+
+            <Button
+                android:id="@+id/btnSeeCustomers"
+                android:layout_width="wrap_content"
+                android:layout_height="65dp"
+                android:layout_marginRight="10dp"
+                android:drawableLeft="@mipmap/see_list"
+
+                ></Button>
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

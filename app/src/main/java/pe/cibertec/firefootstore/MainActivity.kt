@@ -13,13 +13,20 @@ class MainActivity : AppCompatActivity() {
         val btnAccesMain = findViewById<Button>(R.id.btnAccessMain)
         val btnRegisterMain = findViewById<Button>(R.id.btnRegisterMain)
 
-        accessMain(btnAccesMain)
-    }
-
-    private fun accessMain(btnAccesMain: Button) {
         btnAccesMain.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
+
+        btnRegisterMain.setOnClickListener {
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
+        }
     }
+
+
+
+
+
 }
+
