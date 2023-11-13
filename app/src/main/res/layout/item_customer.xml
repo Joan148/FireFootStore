@@ -4,56 +4,68 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="5dp"
+    android:paddingBottom="10dp"
     app:cardCornerRadius="10dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="5dp"
+        android:layout_height="wrap_content"
+
         >
+
         <ImageView
             android:id="@+id/img_firefoot"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/bg_firefootlogo"
-            >
-        </ImageView>
+            android:src="@mipmap/bg_firefootlogo"></ImageView>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignTop="@+id/img_firefoot"
             android:layout_alignBottom="@+id/img_firefoot"
-            android:layout_toEndOf="@+id/img_firefoot"
             android:layout_marginLeft="5dp"
-            android:orientation="vertical"
+            android:layout_toEndOf="@+id/img_firefoot"
             android:gravity="center"
-            >
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/lbl_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nombres: "
-
-                android:textSize="20dp"
                 android:fontFamily="sans-serif-light"
-                >
-            </TextView>
+
+                android:text="Nombres: "
+                android:textSize="20dp"></TextView>
 
             <TextView
                 android:id="@+id/lbl_user"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Usuario: "
-                android:textSize="20dp"
                 android:fontFamily="sans-serif-light"
-                >
-            </TextView>
+                android:text="Usuario: "
+                android:textSize="20dp"></TextView>
+
+
+
+            <TextView
+                android:id="@+id/lbl_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="Email: "
+                android:textSize="20dp"></TextView>
+
+            <TextView
+                android:id="@+id/lbl_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="Celular: "
+                android:textSize="20dp"></TextView>
 
         </LinearLayout>
     </RelativeLayout>
-
 
 
 </androidx.cardview.widget.CardView>

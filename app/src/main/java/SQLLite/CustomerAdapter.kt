@@ -14,6 +14,8 @@ class CustomerAdapter(private val customerList : List<CustomerViewModel>) : Recy
         val imageCustomer = itemView.findViewById<ImageView>(R.id.img_firefoot)
         val name = itemView.findViewById<TextView>(R.id.lbl_name)
         val user = itemView.findViewById<TextView>(R.id.lbl_user)
+        val email = itemView.findViewById<TextView>(R.id.lbl_email)
+        val phone = itemView.findViewById<TextView>(R.id.lbl_phone)
 
 
     }
@@ -28,6 +30,8 @@ class CustomerAdapter(private val customerList : List<CustomerViewModel>) : Recy
         holder.imageCustomer.setImageResource(itemViewModel.image)
         holder.name.text = itemViewModel.fullName
         holder.user.text = itemViewModel.user
+        holder.email.text = itemViewModel.email
+        holder.phone.text = itemViewModel.phone
     }
 
     override fun getItemCount(): Int {
