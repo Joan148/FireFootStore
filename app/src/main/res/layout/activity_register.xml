@@ -75,27 +75,6 @@
             android:textColor="@color/black" />
 
         <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:layout_marginLeft="5dp"
-            android:text="Contraseña"
-            android:textColor="@color/white"
-            android:textSize="17dp" />
-
-        <EditText
-            android:id="@+id/RegisterTxtPwd"
-            android:layout_width="match_parent"
-            android:layout_height="25dp"
-            android:layout_margin="8dp"
-            android:background="@color/white"
-            android:ems="10"
-            android:inputType="textPassword"
-            android:text=""
-            android:textColor="@color/black" />
-
-        <TextView
             android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -112,7 +91,7 @@
             android:layout_margin="8dp"
             android:background="@color/white"
             android:ems="10"
-            android:inputType="textPassword"
+            android:inputType="text"
             android:text=""
             android:textColor="@color/black" />
 
@@ -133,7 +112,7 @@
             android:layout_margin="8dp"
             android:background="@color/white"
             android:ems="10"
-            android:inputType="textPassword"
+            android:inputType="text"
             android:text=""
             android:textColor="@color/black" />
 
@@ -153,17 +132,29 @@
             android:orientation="vertical"
             android:layout_gravity="end"
             >
+        <Button
+            android:id="@+id/btnLimpiar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Limpiar">
 
-            <Button
+        </Button>
+            <!--<Button
                 android:id="@+id/btnSeeCustomers"
                 android:layout_width="wrap_content"
                 android:layout_height="65dp"
                 android:layout_marginRight="10dp"
                 android:drawableLeft="@mipmap/see_list"
 
-                ></Button>
+                ></Button>-->
         </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewClientes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnRegisterCustom"
 
+        />
 
 
 

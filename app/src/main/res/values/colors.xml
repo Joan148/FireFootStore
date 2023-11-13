@@ -12,5 +12,6 @@
     <color name="green">#8CEC54</color>
     <color name="yellow">#DFD156</color>
     <color name="wine_red">#A51212</color>
-
+    <color name="grey">#D3C7C7</color>
+    <color name="light_grey">#eeeeee</color>
 </resources>

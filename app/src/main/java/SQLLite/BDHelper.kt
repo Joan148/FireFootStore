@@ -16,7 +16,6 @@ class BDHelper (context: Context, factory: SQLiteDatabase.CursorFactory?)
             private val COLUMN_ID = "IDCUSTOMER"
             private val COLUMN_NAMES = "NAMES"
             private val COLUMN_USERS = "USER"
-            private val COLUMN_PASSWORDS = "PASSWORD"
             private val COLUMN_EMAILS = "EMAIL"
             private val COLUMN_PHONES = "PHONE"
         }
@@ -27,19 +26,17 @@ class BDHelper (context: Context, factory: SQLiteDatabase.CursorFactory?)
                 + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
                 + COLUMN_NAMES + " TEXT,"
                 + COLUMN_USERS + " TEXT,"
-                + COLUMN_PASSWORDS + " TEXT,"
                 + COLUMN_EMAILS + " TEXT,"
                 + COLUMN_PHONES +  " TEXT)")
         db?.execSQL(queryCreateTable)
 
     }
 
-    fun createRegister(names: String, user: String, password: String, email: String, phone: String) {
+    fun createRegister(names: String, user: String, email: String, phone: String) {
         val db = this.writableDatabase
         val contentValues = ContentValues()
         contentValues.put(COLUMN_NAMES, names)
         contentValues.put(COLUMN_USERS, user)
-        contentValues.put(COLUMN_PASSWORDS, password)
         contentValues.put(COLUMN_EMAILS, email)
         contentValues.put(COLUMN_PHONES, phone)
         db.insert(TABLA_CUSTOMERS, null, contentValues)
@@ -50,6 +47,11 @@ class BDHelper (context: Context, factory: SQLiteDatabase.CursorFactory?)
         return db.rawQuery("SELECT * FROM " + TABLA_CUSTOMERS, null)
     }
 
+    fun clearRegisters() {
+        val db = writableDatabase
+        db.delete(TABLA_CUSTOMERS, null, null)
+        db.close()
+    }
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
 
     }

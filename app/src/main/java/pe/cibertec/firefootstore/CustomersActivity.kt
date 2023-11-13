@@ -8,7 +8,7 @@ import android.os.Bundle
 
 class CustomersActivity : AppCompatActivity() {
 
-    private val customerList = ArrayList<CustomerViewModel>()
+  /*  private val customerList = ArrayList<CustomerViewModel>()
     private val adapter = CustomerAdapter(customerList)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,6 +37,6 @@ class CustomersActivity : AppCompatActivity() {
 
         // Notificar al adaptador que se han actualizado los datos
         adapter.notifyDataSetChanged()
-    }
+    }*/
 
 }
