@@ -16,6 +16,11 @@ class CustomerAdapter(private val customerList : List<CustomerViewModel>) : Recy
         val user = itemView.findViewById<TextView>(R.id.lbl_user)
         val email = itemView.findViewById<TextView>(R.id.lbl_email)
         val phone = itemView.findViewById<TextView>(R.id.lbl_phone)
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/master
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
