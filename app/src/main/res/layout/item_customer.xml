@@ -9,20 +9,14 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        >
+        android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/img_firefoot"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-<<<<<<< HEAD
             android:src="@mipmap/bg_firefootlogo">
         </ImageView>
-=======
-            android:src="@mipmap/bg_firefootlogo"></ImageView>
->>>>>>> origin/master
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -41,12 +35,9 @@
                 android:fontFamily="sans-serif-light"
 
                 android:text="Nombres: "
-<<<<<<< HEAD
                 android:textSize="20dp">
             </TextView>
-=======
-                android:textSize="20dp"></TextView>
->>>>>>> origin/master
+
 
             <TextView
                 android:id="@+id/lbl_user"
@@ -54,14 +45,8 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-light"
                 android:text="Usuario: "
-<<<<<<< HEAD
                 android:textSize="20dp">
             </TextView>
-=======
-                android:textSize="20dp"></TextView>
-
-
->>>>>>> origin/master
 
             <TextView
                 android:id="@+id/lbl_email"
@@ -69,12 +54,8 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-light"
                 android:text="Email: "
-<<<<<<< HEAD
                 android:textSize="20dp">
             </TextView>
-=======
-                android:textSize="20dp"></TextView>
->>>>>>> origin/master
 
             <TextView
                 android:id="@+id/lbl_phone"
@@ -82,12 +63,8 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-light"
                 android:text="Celular: "
-<<<<<<< HEAD
                 android:textSize="20dp">
             </TextView>
-=======
-                android:textSize="20dp"></TextView>
->>>>>>> origin/master
 
         </LinearLayout>
     </RelativeLayout>
