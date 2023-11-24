@@ -6,38 +6,40 @@
     android:layout_height="match_parent"
     android:background="@mipmap/bg_flame"
     tools:context=".MainActivity"
+    android:orientation="vertical"
     >
+
+
     <LinearLayout
         android:id="@+id/logo_firefoot"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="28dp"
         android:gravity="center"
-        >
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+
         <ImageView
             android:layout_width="157dp"
             android:layout_height="157dp"
-            android:src="@mipmap/bg_firefootlogo"
-
-            ></ImageView>
+            android:src="@mipmap/bg_firefootlogo"></ImageView>
     </LinearLayout>
-
 
     <LinearLayout
         android:id="@+id/login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:layout_marginTop="50dp"
         app:layout_constraintBottom_toTopOf="@+id/lay_zapatilla"
         app:layout_constraintTop_toBottomOf="@+id/logo_firefoot"
-
         >
 
         <TextView
             android:id="@+id/textView1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Ingrese su usuario"
+            android:text="Ingrese nombre de usuario"
             android:textColor="@color/white"
             android:textSize="17dp"
             android:layout_marginBottom="8dp"
@@ -60,7 +62,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:layout_margin="8dp"
-            android:text="Ingrese su contraseña"
+            android:text="Ingrese su contraseña (Email)"
             android:textSize="17dp"
             android:textColor="@color/white"/>
 
@@ -82,7 +84,33 @@
             android:layout_marginBottom="5dp"
             android:backgroundTint="@color/wine_red"
             android:layout_margin="10dp"
-            android:text="Iniciar sesion" />
+            android:text="Ingresar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+             <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_margin="8dp"
+            android:text="¿Aún no te has registrado?"
+            android:textSize="14dp"
+            android:textColor="@color/white"/>
+             <Button
+            android:id="@+id/btnNoMeRegistre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:backgroundTint="@color/white"
+            android:layout_margin="10dp"
+            android:textColor="@color/wine_red"
+            android:text="¡Registrate ahora!"
+                 />
+        </LinearLayout>
+
     </LinearLayout>
 
 
@@ -90,18 +118,19 @@
         android:id="@+id/lay_zapatilla"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginBottom="80dp"
-        android:gravity="center">
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
         <ImageView
             android:id="@+id/img_sneaker"
             android:layout_width="250dp"
             android:layout_height="250dp"
-            android:src="@mipmap/bg_sneaker"
-            >
-        </ImageView>
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/bg_sneaker"></ImageView>
     </LinearLayout>
 
 

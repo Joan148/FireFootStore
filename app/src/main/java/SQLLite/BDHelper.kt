@@ -53,7 +53,14 @@ class BDHelper (context: Context, factory: SQLiteDatabase.CursorFactory?)
         db.close()
     }
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
+        TODO("Not yet implemented")
+    }
 
+    fun Acceder(usuario : String, email: String) : Cursor?{
+        val db = this.readableDatabase
+        val sql ="SELECT * FROM " + TABLA_CUSTOMERS + " WHERE " + COLUMN_USERS +" = '" + usuario +"' AND " +
+                COLUMN_EMAILS + " = '"  + email +  "' "
+        return db.rawQuery(sql, null)
     }
 
 }

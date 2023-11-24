@@ -29,6 +29,12 @@ class RegisterActivity : AppCompatActivity() {
         customerRecycler.adapter = adapter
 
         val btnGrabar: Button = findViewById(R.id.btnRegisterCustom)
+        val btnIrIniciarSesion: Button = findViewById(R.id.btnIrLogin)
+
+        btnIrIniciarSesion.setOnClickListener{
+            val loginScreen= Intent(this, LoginActivity::class.java)
+            startActivity(loginScreen)
+        }
 
         btnGrabar.setOnClickListener {
             val txtFullName: EditText = findViewById(R.id.RegisterTxtNames)
@@ -40,7 +46,9 @@ class RegisterActivity : AppCompatActivity() {
             val user = txtUser.text.toString()
             val email = txtEmail.text.toString()
             val phone = txtPhone.text.toString()
+
             val db = BDHelper(this, null)
+
             db.createRegister(fullName, user, email, phone)
             Toast.makeText(this, "Registro guardado", Toast.LENGTH_SHORT).show()
             txtFullName.text.clear()
