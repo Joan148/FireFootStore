@@ -36,13 +36,15 @@ class LoginActivity : AppCompatActivity() {
             if (cursor!!.count <= 0) {
                 Toast.makeText(this, "Usuario y/o contraseña incorrecta", Toast.LENGTH_LONG).show()
             } else {
+                /*
                 cursor!!.moveToFirst()
                 val usuarioIndex = cursor.getColumnIndex("USER")
                 val usuario = cursor.getString(usuarioIndex)
-
+                */
                 // cambiar redireccion, ojo "NO ES HACIA MAINACTIVITY"
-                val productScreen = Intent(this, MainActivity::class.java)
+                val productScreen = Intent(this, ZapatillasActivity::class.java)
                 startActivity(productScreen)
+
             }
         }
     }

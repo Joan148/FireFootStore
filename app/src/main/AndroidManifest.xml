@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FireFootStore"
         tools:targetApi="31">
-        
+
         <activity
             android:name=".ZapatillasActivity"
             android:exported="false" />

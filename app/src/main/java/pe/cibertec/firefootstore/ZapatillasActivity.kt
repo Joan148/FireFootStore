@@ -24,10 +24,8 @@ class ZapatillasActivity : AppCompatActivity() {
             val result = zapatilla_api.getQuotes()
             if (result!=null){
                 val zapatillas = result.body()
-                Log.d("ZAPATILLAS_SIZE", "Tamaño de la lista de zapatillas: ${zapatillas?.size}")
                 if(zapatillas!=null){
                     val data = mutableListOf<ZapatillaViewModel>()
-                    Log.d("ZapatillaAdapter", "Número de elementos en la lista: ${zapatillas.size}")
                     for(item in zapatillas){
                         val zapatilla = ZapatillaViewModel(
                             image = R.mipmap.ic_launcher,
@@ -42,12 +40,17 @@ class ZapatillasActivity : AppCompatActivity() {
         for(item in 1..3) {
             data.add(ZapatillaViewModel(R.mipmap.ic_launcher, "Zapatilla 1", "Marca 1", "Descripción 1", 99.99))
         }*/
-                    val rv_zapatilla:RecyclerView = findViewById(R.id.rv_zapatillas)
-                    rv_zapatilla.layoutManager = LinearLayoutManager(this@ZapatillasActivity)
-                    val adapter = ZapatillaAdapter(data)
-                    rv_zapatilla.adapter = adapter
-
+                    runOnUiThread {
+                        val rv_zapatilla: RecyclerView = findViewById(R.id.rv_zapatillas)
+                        rv_zapatilla.layoutManager = LinearLayoutManager(this@ZapatillasActivity)
+                        val adapter = ZapatillaAdapter(data)
+                        rv_zapatilla.adapter = adapter
+                    }
+                }else{
+                    Log.d("ZapatillasActivity", "API vacía")
                 }
+            }else{
+                Log.d("ZapatillasActivity", "result es nulo")
             }
         }
     }
